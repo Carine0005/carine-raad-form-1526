@@ -1,0 +1,140 @@
+*{box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    background: #DDD;
+    color: #111;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card{
+    background: #F5F5F5;
+    border: 2px solid #DDD;
+    border-radius: 0.5rem;
+    padding: 1rem;
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label[for="fullname"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#fullname {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+label[for="email"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#email {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+legend {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+legend,
+#feedback,
+label[for="message"],
+#message,
+#submit-button {
+  grid-column: 1 / -1;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    border: 2px solid #DDD;
+    border-radius: 0.35rem;
+    padding: 0.75rem;
+    font: inherit;
+    background: #fff;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #6495ED;
+}
+
+#submit-button {
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.35rem;
+    padding: 0.9rem;
+    font: inherit;
+    background: #6495ED;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    filter: brightness(0.95);
+}
+
+.feedback {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.feedback ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.feedback .error {
+    background: #fff;
+    border-left: 6px solid #c62828;
+    padding: 0.75rem;
+    border-radius: 0.35rem;
+}
+
+.feedback .success {
+    background: #fff;
+    border-left: 6px solid #2e7d32;
+    padding: 0.75rem;
+    border-radius: 0.35rem;
+}
+
+@media (max-width: 25rem) {
+    .container {padding: 0.75rem;}
+    .card {padding: 0.85rem;}
+    legend {font-size: 1.8rem;}
+}
+
+@media (min-width: 25rem) and (max-width: 40rem) {
+    .card {padding: 1.1rem;
+     grid-template-columns: 1fr;}
+      label[for="fullname"],
+    #fullname,
+    label[for="email"],
+    #email {
+        grid-column: auto;
+        grid-row: auto;
+}
+}
+
+@media (min-width: 40rem) and (max-width: 50rem) {
+    .card {padding: 1.25rem;}
+}

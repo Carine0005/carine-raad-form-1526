@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Validation</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <main class="container">
+        <form id="contact-form" novalidate>
+            <fieldset class="card">
+                <legend>Contact Us</legend>
+                <div id="feedback" class="feedback" aria-live="polite"></div>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" autocomplete="name" />
+                 <label for="email">Email</label>
+                <input type="text" id="email" name="email" autocomplete="email" />
+                 <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6"></textarea>
+                <input type="button" id="submit-button" value="Submit"/>
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
